@@ -1,0 +1,8 @@
+node_modules
+dist
+build
+.sass-cache
+.publish
+npm-debug.log
+**/generated/**/*.*
+

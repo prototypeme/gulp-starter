@@ -1,0 +1,22 @@
+{
+  "name": "ui-dev-starter-kit",
+  "version": "0.0.0",
+  "homepage": "https://github.com/prototypeme/gulp-starter",
+  "authors": [
+    "prototypeme"
+  ],
+  "keywords": [
+    "gulp-starter",
+    "mock-server",
+    "sass",
+    "ui-dev-kit"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
