@@ -2,10 +2,10 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var cleanCss    = require('gulp-clean-css');
-var concatCss = require('gulp-concat-css');
+var concatCss   = require('gulp-concat-css');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', ['sass-dev'], function() {
     browserSync.init({
         server: ['./src', './dist']
     });
@@ -14,8 +14,7 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch('src/**/*.js').on('change', browserSync.reload);
 });
 
-// Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', function() {
+gulp.task('sass-dev', function() {
     return gulp.src('src/**/*.scss')
         .pipe(sass({
           noCache: true,
@@ -26,5 +25,6 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('dist/'))
         .pipe(browserSync.stream());
 });
+
 
 gulp.task('default', ['serve']);
