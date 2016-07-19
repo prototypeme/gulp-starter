@@ -12,5 +12,6 @@ gulp.task('sass-build', function() {
         }))
         .pipe(concatCss('index.css'))
         .pipe(cleanCss())
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('dist/'))
+        .pipe(browserSync.stream());
 });
