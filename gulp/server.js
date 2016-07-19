@@ -4,9 +4,11 @@ var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var cleanCss    = require('gulp-clean-css');
 var concatCss   = require('gulp-concat-css');
+var config      = require('../config');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass-dev'], function() {
+    var dirs = config.dirs;
     browserSync.init({
         server: [dirs.src, dirs.dist]
     });
